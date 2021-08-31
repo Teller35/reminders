@@ -20,6 +20,12 @@ const userSchema = new Schema(
       required: true,
       minlength: 6,
     },
+    reminders: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Reminder",
+      },
+    ],
   },
   {
     toJSON: {
