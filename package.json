@@ -1,11 +1,19 @@
 {
   "name": "reminders",
   "version": "1.0.0",
-  "description": "An app to help send reminders to a mobile user",
+  "description": "An app to help send reminders to mobile users",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Teller35/reminders.git"
+  },
   "author": "Teller Wetzel",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Teller35/reminders/issues"
+  },
+  "homepage": "https://github.com/Teller35/reminders#readme"
 }
