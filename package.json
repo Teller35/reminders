@@ -21,5 +21,6 @@
   "homepage": "https://github.com/Teller35/reminders#readme",
   "devDependencies": {
     "concurrently": "^6.2.1"
-  }
+  },
+  "dependencies": {}
 }
