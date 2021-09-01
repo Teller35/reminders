@@ -17,8 +17,8 @@ const MyNavbar = () => {
     } else {
       return (
         <>
-          <Nav.Link href="/login">LogIn</Nav.Link>
-          <Nav.Link href="/signup">SignUp</Nav.Link>
+          <Nav.Link href="/login">Log-In</Nav.Link>
+          <Nav.Link href="/signup">Sign-Up</Nav.Link>
         </>
       );
     }

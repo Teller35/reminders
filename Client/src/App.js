@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import LandingPage from "./pages/LandingPage";
 import SignUpPage from "./pages/SignUpPage";
 import LogInPage from "./pages/LogInPage";
+import HomePage from "./pages/HomePage";
 import "./App.css";
 
 const client = new ApolloClient({
@@ -31,6 +32,7 @@ function App() {
             <Route exact path="/" component={LandingPage}/>
             <Route exact path="/signup" component={SignUpPage}/>
             <Route exact path="/login" component={LogInPage}/>
+            <Route exact path="/home" component={HomePage}/>
           </Switch>
           <Footer />
         </div>
