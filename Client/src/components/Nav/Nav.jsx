@@ -1,35 +1,24 @@
 import React from "react";
-import { Nav } from "react-bootstrap";
-// import { Link } from "react-router-dom";
+import { Nav, Container, Navbar } from "react-bootstrap";
 import Auth from "../../utils/auth";
 
-const Navbar = () => {
+const MyNavbar = () => {
   function loginNav() {
-    if (!Auth.loggedIn()) {
+    if (Auth.loggedIn()) {
       return (
         <>
-          <Nav.Item>
-            <Nav.Link to="/home">Home</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link to="/profile">Profile</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link to="/" onClick={() => Auth.logout()}>
-              Logout
-            </Nav.Link>
-          </Nav.Item>
+          <Nav.Link href="/home">Home</Nav.Link>
+          <Nav.Link href="/profile">Profile</Nav.Link>
+          <Nav.Link href="/" onClick={() => Auth.logout()}>
+            Logout
+          </Nav.Link>
         </>
       );
     } else {
       return (
         <>
-          <Nav.Item>
-            <Nav.Link to="/login">LogIn</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link to="/signup">SignUp</Nav.Link>
-          </Nav.Item>
+          <Nav.Link href="/login">LogIn</Nav.Link>
+          <Nav.Link href="/signup">SignUp</Nav.Link>
         </>
       );
     }
@@ -37,10 +26,14 @@ const Navbar = () => {
 
   return (
     <header>
-      <h1>Reminders</h1>
-      <Nav className="justify-content-end">{loginNav()}</Nav>
+      <Navbar bg="dark" variant="dark">
+        <Container>
+          <Navbar.Brand className="fs-1">Reminders</Navbar.Brand>
+          <Nav className="justify-content-end">{loginNav()}</Nav>
+        </Container>
+      </Navbar>
     </header>
   );
 };
 
-export default Navbar;
+export default MyNavbar;
