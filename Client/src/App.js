@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { ApolloProvider } from "@apollo/react-hooks";
 import ApolloClient from "apollo-boost";
+import Nav from "./components/Nav";
 import "./App.css";
 
 const client = new ApolloClient({
@@ -21,10 +22,10 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
+          <Nav />
           <Switch>
             <Route exact path="/" />
           </Switch>
-          <header>Reminders</header>
         </div>
       </Router>
     </ApolloProvider>
